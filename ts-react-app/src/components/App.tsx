@@ -1,12 +1,10 @@
 import React from 'react'
-import {Button} from 'antd'
+import Hello from './hello/hello'
 
-interface Greeting {
-  name: string
-}
-
-const App = (props: Greeting) => (
-<Button>Hello {props.name}</Button>
+const App = () => (
+  <>
+    <Hello name="Typescript" />
+  </>
 )
 
 export default App
