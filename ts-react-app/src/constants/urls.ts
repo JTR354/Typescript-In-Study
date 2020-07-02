@@ -1,0 +1,1 @@
+export const GET_EMPLYEE_URL = '/api/employee/getEmployee.action'
