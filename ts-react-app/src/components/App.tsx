@@ -1,9 +1,11 @@
 import React from 'react'
-import Hello from './hello/hello'
+// import HelloHoc from './hello/hellHoc'
+import HelloHooks from './hello/HelloHooks'
 
 const App = () => (
   <>
-    <Hello name="Typescript" />
+    {/* <HelloHoc name="Typescript" loading={false} /> */}
+    <HelloHooks name="Typescirpt"></HelloHooks>
   </>
 )
 

@@ -4,16 +4,16 @@ import { Button } from 'antd'
 
 interface Greeting {
   name: string
-  firstName: string
-  lastName: string
+  firstName?: string
+  lastName?: string
 }
 
-interface State {
+interface HelloState {
   count: number
 }
 
-class Hello extends Component<Greeting, State> {
-  state: State = {
+class Hello extends Component<Greeting, HelloState> {
+  state: HelloState = {
     count: 0
   }
   static defaultProps = {
