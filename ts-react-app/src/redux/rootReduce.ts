@@ -6,4 +6,4 @@ const reducers = {
   employee
 }
 
-export default combineReducers(employee)
+export default combineReducers(reducers)

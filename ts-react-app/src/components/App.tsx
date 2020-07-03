@@ -1,13 +1,13 @@
 import React from 'react'
 // import HelloHoc from './hello/hellHoc'
 // import HelloHooks from './hello/HelloHooks'
-import {Route, Link, Router} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
 import {Layout, Menu, ConfigProvider} from 'antd'
-import zh_CN from 'antd/lib/locale-provider/zh_CN'
+import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import './App.css'
 import Empolyee from './employee'
 import Setting from './setting'
-
+console.log(zh_CN)
 const {Header, Content,Footer} = Layout
 
 const App = ({match}: any) => {

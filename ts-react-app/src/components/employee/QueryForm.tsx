@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Form, Input, Select , Button } from 'antd'
 import { FormComponentProps } from 'antd/lib/form';
 import { get} from '../../utils/request'
-import {GET_EMPLYEE_URL} from '../../constants/urls'
+import {GET_EMPLOYEE_URL} from '../../constants/urls'
 import {EmployeeRequest, EmployeeResponse} from '../../interface/employee'
 
 interface Props extends FormComponentProps  {
@@ -30,7 +30,7 @@ class QueryForm extends Component<Props, EmployeeRequest> {
     this.queryEmployee(this.state)
   }
   queryEmployee (params: EmployeeRequest) {
-    get(GET_EMPLYEE_URL, params).then(res => {
+    get(GET_EMPLOYEE_URL, params).then(res => {
       this.props.onDataChange(res.data)
     })
   }
