@@ -4,7 +4,7 @@ import {employeeColumns} from './colums'
 import {EmployeeResponse} from '../../interface/employee'
 import QueryForm from './QueryForm'
 import './index.css'
-
+import 'antd/dist/antd.css'
 
 interface State {
   employee: EmployeeResponse

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Input, Select , Button } from 'antd'
 import { FormComponentProps } from 'antd/lib/form';
+import { get} from '../../utils/request'
 import {GET_EMPLYEE_URL} from '../../constants/urls'
 import {EmployeeRequest, EmployeeResponse} from '../../interface/employee'
 
@@ -29,7 +30,9 @@ class QueryForm extends Component<Props, EmployeeRequest> {
     this.queryEmployee(this.state)
   }
   queryEmployee (params: EmployeeRequest) {
-    console.log(123)
+    get(GET_EMPLYEE_URL, params).then(res => {
+      this.props.onDataChange(res.data)
+    })
   }
   render() {
     return (
@@ -58,7 +61,7 @@ class QueryForm extends Component<Props, EmployeeRequest> {
           </Select>
         </Form.Item>
         <Form.Item>
-          <Button type="primary" onClick={this.handleSubmit}></Button>
+          <Button type="primary" onClick={this.handleSubmit}>查询</Button>
         </Form.Item>
       </Form>
     )
