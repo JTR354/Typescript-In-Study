@@ -5,7 +5,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  layout: {},
+  // layout: {},
   antd: {},
   theme: aliyunTheme,
   routes
