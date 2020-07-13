@@ -64,7 +64,7 @@ let cat = new Cat
 let animals: Animal[] = [dog, cat]
 
 animals.forEach((item) => {
-  item.sleep()
+  // item.sleep()
 })
 
 
