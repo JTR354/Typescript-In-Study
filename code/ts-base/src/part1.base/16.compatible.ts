@@ -144,6 +144,4 @@ void function () {
   }
   log1 = log2
   log2 = log1
-  
-  
 }()
