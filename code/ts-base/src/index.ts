@@ -12,6 +12,9 @@ import './part1.base/18.advanced-1'
 import './part1.base/19.advanced-2'
 import './part1.base/20.advanced-3'
 import './part1.base/21.advanced-4'
+import './part2.project/01.module/es6/c'
+import './part2.project/01.module/node/c.node'
+import './part2.project/02.namespace/b'
 
 let hello: string = 'Hello TypeScript'
 document.querySelectorAll('#app')[0].innerHTML = hello
