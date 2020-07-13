@@ -55,6 +55,7 @@
 
    if(lang as Java) {
     console.log(lang, 'as java')
+    // lang.helloJava()
    } else {
     console.log(lang, 'as js');
    }
@@ -84,6 +85,6 @@
    return lang
  }
 
- getLanguage(Type.Week, '123')
+//  getLanguage(Type.Week, '123')
 
  
