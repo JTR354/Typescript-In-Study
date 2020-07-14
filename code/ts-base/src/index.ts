@@ -17,11 +17,41 @@ import './part2.project/01.module/node/c.node'
 import './part2.project/02.namespace/b'
 import './part2.project/03.merge/merge'
 import './part2.project/04.libs'
+import { type } from 'jquery'
 
-let hello: string = 'Hello TypeScript'
-document.querySelectorAll('#app')[0].innerHTML = hello
+const hello: string = 'Hello TypeScript'
+const App = document.getElementById('app') as HTMLElement
+if ('innerHTML' in App) {
+  App.innerHTML = hello
+}
 
-let App = document.getElementById('app')
 
-// App?.innerHTML = '123'
-// hello = 1
+/**
+ * example
+ */
+interface Result{
+  error_msg: string
+  error_code: number
+}
+
+function getList<Promise>() {
+  return new Promise<Result>((resolve,reject) => {
+    setTimeout(() => {
+      resolve({
+        error_msg: '200',
+        error_code: 0
+      })
+    }, 500)
+  })
+}
+
+async function API() {
+  console.log('666')
+  console.time('flag')
+  let res = await getList<Result>()
+  console.timeEnd('flag')
+  console.log(res.error_code);
+  console.log(res.error_msg);
+}
+
+API()
