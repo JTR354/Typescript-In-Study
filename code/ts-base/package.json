@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
-    "build": "webpack --mode=production --config ./build/webpack.config.js"
+    "build": "webpack --mode=production --config ./build/webpack.config.js",
+    "lint": "eslint src --ext .js,.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +15,11 @@
   "devDependencies": {
     "@types/jquery": "^3.5.0",
     "@types/moment": "^2.13.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
     "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^7.4.0",
     "fork-ts-checker-webpack-plugin": "^5.0.7",
     "html-webpack-plugin": "^4.3.0",
     "ts-loader": "^8.0.0",
