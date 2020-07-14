@@ -24,3 +24,4 @@ document.querySelectorAll('#app')[0].innerHTML = hello
 let App = document.getElementById('app')
 
 // App?.innerHTML = '123'
+// hello = 1

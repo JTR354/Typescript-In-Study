@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const path = require('path')
-console.log(path.join(__dirname, '../src/tpl/index.html'))
+const {CheckerPlugin} = require('awesome-typescript-loader') // 类型检查有坑，建议用ts-loader
+
 module.exports = {
   entry: './src/index.ts',
   output: {
@@ -14,7 +16,11 @@ module.exports = {
       {
         test: /\.tsx?$/i,
         use: [{
-          loader: 'ts-loader'
+          // loader: 'ts-loader',
+          loader: 'awesome-typescript-loader',
+          options: {
+            transpileOnly: true
+          }
         }],
         exclude: /node_modules/
       }
@@ -23,6 +29,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../src/tpl/index.html')
-    })
+    }),
+    // new ForkTsCheckerWebpackPlugin()
+    new CheckerPlugin()
   ]
 }
