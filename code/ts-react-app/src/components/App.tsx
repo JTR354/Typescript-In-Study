@@ -15,7 +15,7 @@ enum MENU {
 
 function App({match}: any) {
   // let defaultKey = (match && match.url.replace('/', '')) || MENU.employee
-  let defaultKey = (match && match.url) || MENU.employee
+  let defaultKey = match.url === '/' ? MENU.employee : match.url
   // console.log(defaultKey)
   return (
     <ConfigProvider>
