@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'
-import Router from './routers'
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import { Provider } from 'react-redux'
+// import Router from './routers'
 
-import store from './redux/store'
-import 'antd/dist/antd.css'
+// import store from './redux/store'
+// import 'antd/dist/antd.css'
 // import './index.css';
 // import App from './App';
 // import * as serviceWorker from './serviceWorker';
@@ -21,9 +21,19 @@ import 'antd/dist/antd.css'
 // Learn more about service workers: https://bit.ly/CRA-PWA
 // serviceWorker.unregister();
 
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <Router />
+//   </Provider>,
+//   document.getElementById('root')
+// )
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import 'antd/dist/antd.css'
+import PDF from './pdf.jsx'
+
 ReactDOM.render(
-  <Provider store={store}>
-    <Router />
-  </Provider>,
+  <PDF/>,
   document.getElementById('root')
 )
