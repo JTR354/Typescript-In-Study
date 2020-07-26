@@ -79,6 +79,21 @@ export default defineConfig({
               component: './ListTableList',
             },
             {
+              name: 'form',
+              icon: 'form',
+              path: '/form',
+              routes: [
+                {
+                  path: '/form',
+                  redirect: './form-base'
+                },
+                {
+                  path: './form-base',
+                  component: './form/form-base/form-base'
+                }
+              ]
+            },
+            {
               component: './404',
             },
           ],
