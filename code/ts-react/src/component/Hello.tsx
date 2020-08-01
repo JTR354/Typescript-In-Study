@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useContext} from 'react'
 import { IRow, IToggle } from './modal.d'
 import Modal from './Modal'
 interface Greeting {
@@ -18,6 +18,9 @@ export default (props: Greeting) => {
       setRow(undefined)
     }
   }, [])
+  // @ts-ignore
+  console.log(React.Children);
+  
   return (
     <>
       <div>

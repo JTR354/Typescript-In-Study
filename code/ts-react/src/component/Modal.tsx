@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {IRow, IToggle} from './modal.d'
 interface IProps {
   row?: IRow
